@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+
+<body>
+    <div id="calc">
+        <img src="kecbanner.png" alt="m" id="img" >
+        <hr class="hr">
+        <div id="innercalc">
+            <div class="input-group">
+                <label for="number" id="t" onmouseover="handleMouseOver()" onmouseout="handleMouseOut()" >NUMBER OF SEMESTER : </label><BR>
+                <input type="text" id="semesterCount" min="1" onfocus="handleFocus(this)" onblur="handleBlur(this)">
+            </div>
+
+            <button type="button" id="b" onclick="generateSemesterTables()" >Generate Tables</button>
+
+
+            <div id="semesterTables"></div>
+        
+            <button type="button" id="calculateCGPAButton" class="b" onclick="calculateCGPA()" style="display:none">Calculate CGPA</button>
+            <h3 id="c">CGPA: <span id="cgpa">0.00</span></h3>  
+        </div>
+    </div>
+    <script src="calc.js"></script>
+    
+</body>
+</html>
